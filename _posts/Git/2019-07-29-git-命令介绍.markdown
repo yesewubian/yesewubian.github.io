@@ -30,4 +30,13 @@
 
 要忽略的文件模式
 
-#### 
+#### git diff
+
+- git diff *本身只显示尚未暂存的改动*
+- git diff --cached *已暂存的将要添加到下次提交里的内容*
+
+#### git commit
+
+- git commit *这种方式会启动文本编辑器以便输入本次提交的说明*
+- git cmomit -m "说明" *附加提交说明*
+
