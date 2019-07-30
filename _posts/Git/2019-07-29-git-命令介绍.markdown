@@ -1,0 +1,33 @@
+#### git config
+
+- git config --list *列出所有配置项*
+- git config key *查看某一项配置*
+- git config key value *修改某一项配置（项目中）*
+- git config --global key value *修改某一项配置（当前用户）*
+- git config --system key value *修改某一项配置（全局配置所有用户）*
+
+#### git init
+
+*初始化仓库*
+
+#### git clone 
+
+- git clone url *克隆项目*
+- git clone url filename *克隆项目到指定目录*
+
+#### git status
+
+*查看文件状态*
+
+
+#### git add 
+
+- git add file/dir 
+
+*添加内容到下一次提交，可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等*
+
+#### .gitignore
+
+要忽略的文件模式
+
+#### 
