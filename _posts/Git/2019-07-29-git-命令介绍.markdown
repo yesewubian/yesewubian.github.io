@@ -65,4 +65,5 @@ $ git add README
 - git log --stat -2 *列出最近2次提交的简略统计信息*
 - git log --pretty=[oneline|short|full|fuller] 
 
-### git 
+### git commit
+1
