@@ -1,4 +1,4 @@
-#### git config
+### git config
 
 - git config --list *列出所有配置项*
 - git config key *查看某一项配置*
@@ -6,48 +6,48 @@
 - git config --global key value *修改某一项配置（当前用户）*
 - git config --system key value *修改某一项配置（全局配置所有用户）*
 
-#### git init
+### git init
 
 *初始化仓库*
 
-#### git clone 
+### git clone 
 
 - git clone url *克隆项目*
 - git clone url filename *克隆项目到指定目录*
 
-#### git status
+### git status
 
 *查看文件状态*
 
 
-#### git add 
+### git add 
 
 - git add file/dir 
 
 *添加内容到下一次提交，可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等*
 
-#### .gitignore
+### .gitignore
 
 要忽略的文件模式
 
-#### git diff
+### git diff
 
 - git diff *本身只显示尚未暂存的改动*
 - git diff --cached *已暂存的将要添加到下次提交里的内容*
 
-#### git commit
+### git commit
 
 - git commit *这种方式会启动文本编辑器以便输入本次提交的说明*
 - git commit -m "说明" *附加提交说明*
 - git commit -a *跳过使用暂存区*
 
-#### git rm 
+### git rm 
 
 - git rm filename *从已跟踪文件清单中移除（确切地说，是从暂存区域移除），并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。*
 
 - git rm --cached filename *移除跟踪，但保留磁盘中的内容*
 
-#### git mv
+### git mv
 
 - git mv file1 file2 *移动|重命名文件*
 相当于 执行了三个命令
@@ -58,11 +58,11 @@ $ git rm README.md
 $ git add README
 ```
 
-#### git log
+### git log
 
 - git log *列出所有更新记录*
 - git log -p -2 *列出最近2次更新的内容差异*
 - git log --stat -2 *列出最近2次提交的简略统计信息*
 - git log --pretty=[oneline|short|full|fuller] 
 
-#### git 
+### git 
