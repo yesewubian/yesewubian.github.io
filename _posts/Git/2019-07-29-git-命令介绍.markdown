@@ -1,30 +1,32 @@
 ### git config
 
-- git config --list *列出所有配置项*
-- git config key *查看某一项配置*
-- git config key value *修改某一项配置（项目中）*
-- git config --global key value *修改某一项配置（当前用户）*
-- git config --system key value *修改某一项配置（全局配置所有用户）*
+- git config --list 列出所有配置项
+- git config key 查看某一项配置
+- git config key value 修改某一项配置（项目中）
+- git config --global key value 修改某一项配置（当前用户）
+- git config --system key value 修改某一项配置（全局配置所有用户）
+- git config --global alias.co checkout 设置别名
+- git config --global alias.visual '!gitk' 别名执行外部命令,注意感叹号
 
 ### git init
 
-*初始化仓库*
+初始化仓库
 
 ### git clone 
 
-- git clone url *克隆项目*
-- git clone url filename *克隆项目到指定目录*
+- git clone url 克隆项目
+- git clone url filename 克隆项目到指定目录
 
 ### git status
 
-*查看文件状态*
+查看文件状态
 
 
 ### git add 
 
 - git add file/dir 
 
-*添加内容到下一次提交，可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等*
+添加内容到下一次提交，可以用它开始跟踪新文件，或者把已跟踪的文件放到暂存区，还能用于合并时把有冲突的文件标记为已解决状态等
 
 ### .gitignore
 
@@ -32,24 +34,24 @@
 
 ### git diff
 
-- git diff *本身只显示尚未暂存的改动*
-- git diff --cached *已暂存的将要添加到下次提交里的内容*
+- git diff 本身只显示尚未暂存的改动
+- git diff --cached 已暂存的将要添加到下次提交里的内容
 
 ### git commit
 
-- git commit *这种方式会启动文本编辑器以便输入本次提交的说明*
-- git commit -m "说明" *附加提交说明*
-- git commit -a *跳过使用暂存区*
+- git commit 这种方式会启动文本编辑器以便输入本次提交的说明
+- git commit -m "说明" 附加提交说明
+- git commit -a 跳过使用暂存区
 
 ### git rm 
 
-- git rm filename *从已跟踪文件清单中移除（确切地说，是从暂存区域移除），并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。*
+- git rm filename 从已跟踪文件清单中移除（确切地说，是从暂存区域移除），并连带从工作目录中删除指定的文件，这样以后就不会出现在未跟踪文件清单中了。
 
-- git rm --cached filename *移除跟踪，但保留磁盘中的内容*
+- git rm --cached filename 移除跟踪，但保留磁盘中的内容
 
 ### git mv
 
-- git mv file1 file2 *移动|重命名文件*
+- git mv file1 file2 移动|重命名文件
 相当于 执行了三个命令
 
 ```
@@ -60,13 +62,74 @@ $ git add README
 
 ### git log
 
-- git log *列出所有更新记录*
-- git log -p -2 *列出最近2次更新的内容差异*
-- git log --stat -2 *列出最近2次提交的简略统计信息*
+- git log 列出所有更新记录
+- git log -p -2 列出最近2次更新的内容差异
+- git log --stat -2 列出最近2次提交的简略统计信息
 - git log --pretty=[oneline|short|full|fuller] 
+- git log --decorate 查看
+- git log --decorate --oneline 查看
+- git log --graph
 
 ### git commit
 
-- git commit --amend *这个命令会将暂存区中的文件提交。 如果自上次提交以来你还未做任何修改（例如，在上次提交后马上执行了此命令），那么快照会保持不变，而你所修改的只是提交信息。如果有修改，最终你只会有一个提交——第二次提交将代替第一次提交的结果。*
+- git commit --amend 这个命令会将暂存区中的文件提交。 如果自上次提交以来你还未做任何修改（例如，在上次提交后马上执行了此命令），那么快照会保持不变，而你所修改的只是提交信息。如果有修改，最终你只会有一个提交——第二次提交将代替第一次提交的结果。
 
 ### git reset
+
+- git reset HEAD filename 撤销暂存区的修改，但是保留文件修改内容
+- git checkout -- filename 撤消修改——将它还原成上次提交时的样子
+
+### git remote
+
+- git remote 查看远程仓库
+- git remote -v 查看远程仓库(详细)
+- git remote add localname[本地名] url[远程仓库名] 添加远程仓库
+- git remote show origin 查看某一个远程仓库的更多信息
+- git remote rename pb paul 修改一个远程仓库的简写名
+- git remote rm paul 移除一个远程仓库
+
+### git fetch
+
+- git fetch [remote-name] 访问远程仓库，从中拉取所有你还没有的数据
+
+### git pull
+
+自动的抓取然后合并远程分支到当前分支
+
+### git push
+
+- git push [remote-name] [branch-name] 推送数据到远程仓库
+
+### git tag
+
+- git tag 列出所有标签
+- git tag -l 'v1.8.5*'  列出所有标签(筛选)
+- git show tagname  列出标签详细信息
+- git tag -a v1.4 -m "my version 1.4"  创建附注标签 -m 选项指定了一条将会存储在标签中的信息
+- git tag v1.4-lw 创建轻量标签
+- git tag -a v1.2 9fceb02 在某次提交上打标签
+- git push origin v1.5  将标签v1.5推送到服务端
+- git push --tags 把所有不在远程仓库服务器上的标签全部传送到那里
+- git tag -d <tagname> 删除掉你本地仓库上的标签
+- git push <remote> :refs/tags/<tagname> 删除远程分支
+
+### git branch 
+
+- git branch 列出所有分支
+- git branch -v 列出所有分支 附带每个分支的最后一个提交信息
+- git branch branch_one 创建分支 branch_one
+- git branch checkout 切换分支
+- git branch --merged  列出已经合并的分支
+- git branch --no-merged  列出未合并的分支
+- git branch -u origin/serverfix  修改跟踪分支
+- git branch ---set-upstream-to origin/serverfix 修改跟踪分支
+- git merge branch1 将分支branch1合并到当前分支
+- git mergetool 调用合并工具
+
+
+
+### git checkout
+
+- git checkout -b branch_name 创建并切换到分支branch_name
+
+
