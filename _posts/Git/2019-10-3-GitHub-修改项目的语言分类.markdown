@@ -1,0 +1,8 @@
+### 修改github上项目的语言归类
+
+在项目目录中创建一个名为".gitattributes"的文件，添加以下代码：
+```
+*.html linguist-language=PHP
+```
+将.html后缀的文件语言标记为 php
+重新上传到 GitHub 上，然后就可以发现乖乖的从 html 变回 PHP 了,其他语言类似，指定某些
