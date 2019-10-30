@@ -5,4 +5,4 @@
 *.html linguist-language=PHP
 ```
 将.html后缀的文件语言标记为 php
-重新上传到 GitHub 上，然后就可以发现乖乖的从 html 变回 PHP 了,其他语言类似，指定某些
+重新上传到 GitHub 上，然后就可以发现乖乖的从 html 变回 PHP 了,其他语言类似.
